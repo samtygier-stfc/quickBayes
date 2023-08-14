@@ -4,7 +4,7 @@ easier for translating modules in the future. They have
 all been marked as deprecated and just call the new versions.
 """
 
-from fortran_python import (find_index, round_sig, get_range, Vec,
+from quasielasticbayes.fortran_python import (find_index, round_sig, get_range, Vec,
                             Matrix_2D, deprecated)
 from quasielasticbayes.constants import m_d2, m_sp
 from quasielasticbayes.four_python import flatten, compress, FOUR2_IFT

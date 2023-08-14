@@ -10,6 +10,6 @@ dependencies:
   - pytest
   - pre-commit >=2.15
   - pip:
-    - cython >=0.29.32 # stops conda getting the wrong version
+    - cython >=0.29.32, <3.0.0 # stops conda getting the wrong version
     - gofit
   - gfortran >=2.2

@@ -25,7 +25,7 @@ def create_fortran_extension(fq_name: str, sources: Sequence[str]) -> FortranExt
     extra_compile_args, extra_link_args = compiler_flags()
     return FortranExtension(name=fq_name,
                             sources=sources,
-                            extra_f90_compile_args=["-O1"],
+                            extra_f90_compile_args=["-O1", "-fallow-argument-mismatch"],
                             extra_link_args=extra_link_args,
                             extra_compile_args=extra_compile_args)
 

@@ -52,12 +52,7 @@ def compiler_flags() -> Tuple[Sequence[str], Sequence[str]]:
         extra_link_args = []
         extra_f90_compile_args = ["-O1"]
 
-    gfortran_version_s = check_output(["gfortran", "-v"],stderr=STDOUT, encoding="utf-8")
-    gfortran_version_s = [l for l in gfortran_version_s.splitlines() if l.startswith("gcc version")][0]
-    gfortran_version = [int(s) for s in gfortran_version_s.split()[2].split('.')]
-
-    if gfortran_version[0] >= 10:
-        extra_f90_compile_args.append("-fallow-argument-mismatch")
+    extra_f90_compile_args.append("-std=legacy")
 
     return extra_compile_args, extra_link_args, extra_f90_compile_args
 
